@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
+import configparser
+
 import pandas as pd
 import weired_dictionary.tools.dataframe as df_tool
-import configparser
+
 config = configparser.ConfigParser()
 config.read('config.cfg')
 FILEPATH = config['DEFAULT']['FILEPATH']
@@ -45,6 +47,7 @@ def check_dict(key):
     index = key
     df = df_tool.check_index(index)
     print(df)
+
 
 def check_index(key=None):
     index = key
